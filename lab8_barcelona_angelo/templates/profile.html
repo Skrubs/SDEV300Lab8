@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+<title>Member Profile</title>
+
+{% endblock %}
+
+{% block body %}
+<h1 id="h1">
+    Member Profile: {{ user }}
+</h1>
+
+<section>
+    <h2 id="reset">
+        Reset Password
+    </h2>
+
+    <form action="/reset" method='POST' id="login_form">
+
+       <input type="password" aria-label="Current Password" class="form_input_style"
+              placeholder="Current Password", name="currentpassword">
+
+        <input type="password" aria-label="New Password" class="form_input_style"
+              placeholder="New Password", name="newpassword">
+
+        <input type="submit" class="submit" value="reset" id="login_button">
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+                {% for msg in messages %}
+                   <p class="flash_message">{{ msg }}</p>
+                {% endfor %}
+            {% endwith %}
+</section>
+
+{% endblock %}

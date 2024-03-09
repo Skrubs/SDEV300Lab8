@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>RnK Image</title>
+{% endblock %}
+
+{% block body %}
+<header>
+<h1 id="h1">
+    Rooks and Kings from "This is EVE" commercial.
+
+</h1>
+    <p id="loggedUser">Logged in as: {{ user }}</p>
+    {% with messages = get_flashed_messages() %}
+                {% for msg in messages %}
+                    <p class="flash_message">{{ msg }}</p>
+                {% endfor %}
+            {% endwith %}
+</header>
+<p>
+    <!--Image below is for page 3 of this site. -->
+    <img src="static/res/rnk.jpg" alt="Image of Rooks and kings Rokh">
+</p>
+<p>
+    <button class="next_button" onclick="document.location= '/profile'">Profile</button>
+    <button onclick="document.location='/members'">Back</button>
+    <button onclick="document.location='/index'">Home</button>
+    <button class="next_button" onclick="document.location='/logout'">Logout</button>
+</p>
+{% endblock %}

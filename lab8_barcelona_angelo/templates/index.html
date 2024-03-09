@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+<!--This is the landing page it has an about section, what happened, external links, and
+links to page two-->
+
+{% block head %}
+<head>
+    <title>EVE Online News</title>
+</head>
+{% endblock %}
+<!--body block contains most of this pages content-->
+{% block body %}
+    <header id="head_1">
+        <h1 id="h1">Rooks and Kings Retires from EveOnline</h1>
+            <p id="loggedUser">Logged in as: {{ user }}</p>
+            {% with messages = get_flashed_messages() %}
+                {% for msg in messages %}
+                   <p class="flash_message">{{ msg }}</p>
+                {% endfor %}
+            {% endwith %}
+
+        <ul id="button_list">
+            <li><button class="next_button" onclick="document.location= '/profile'">Profile</button>
+                <button class="next_button" onclick="document.location= '/members'">Membership</button>
+                <button class="next_button" onclick="document.location= '/image'">RnK Image</button>
+                <button class="next_button" onclick="document.location='/logout'">Logout</button></li>
+        </ul>
+
+
+    </header>
+
+    <section id="nav_section_1">
+        <aside id="nav_section_aside_1">
+            <img src="static/res/rnk_img_2.jpg" alt="Image of Rooks and kings Rokh" class="img_2">
+        </aside>
+        <nav id="site_nav">
+        <p>Website: <a href="http://www.rooksandkings.com/">Rooks and Kings</a></p>
+        <p>Youtube: <a href="https://www.youtube.com/@Rooksandkings">RnK Youtube</a></p>
+        <p>Zkillboard: <a href="https://zkillboard.com/alliance/1409089077/">RnK Battleship Killboard</a></p>
+        </nav>
+        <aside id="nav_section_aside_2">
+            <img src="static/res/rnk_img_3.jpg" alt="Image of Rooks and kings Rokh" class="img_2">
+        </aside>
+    </section>
+
+    <section id="index_main_section">
+
+        <article id="main_section_article">
+            <h2>About Rooks and Kings</h2>
+            <p>Rooks and Kings known to most as RnK was innovative in their tactics.
+            Leading the way for others to adopt their fighting style.  First they came up with
+            the Triage tactics that run wild in New Eden today, and then they shifted their toolkit
+            to the relentless Battleship pipe bombing strategy where they would decimate extremely
+            large fleets of 200+ foes with only 20 people.  Today they remain undefeated.</p>
+         </article>
+
+        <aside id="main_section_aside">
+            <h3>What happened to Rooks and Kings</h3>
+            <p>Through Reddit and other channels there are a lot of rumors of what happened to
+            Rooks and Kings, and as a director and core member of Rooks and Kings I can see none
+            of what you read is true.  What happened to us is simple, it's the same thing that happens
+            to most....Time.  A lot of us are older now with families and more responsibilities.
+            We are all still friends and great gaming community, but we just can't devote the time
+            it requires to EVE Online anymore.</p>
+         </aside>
+    </section>
+
+    <footer id="index_footer">
+    <section>
+    <ul id="unordered_list">
+        Region's Wars won by RnK
+        {% for system in systems %}
+         <li>
+            {{ system }}
+         </li>
+
+        {% endfor %}
+    </ul>
+    </section>
+    <p>Date: {{ date_time.now().month }}:{{ date_time.now().day }}:{{ date_time.now().year }}</p>
+    <p>Time: {{ date_time.now().hour }}:{{ date_time.now().minute }}</p>
+    </footer>
+
+{% endblock %}

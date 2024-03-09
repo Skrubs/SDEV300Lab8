@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<head>
+      <title>RnK Members</title>
+</head>
+
+
+{% endblock %}
+
+{% block body %}
+<header id="member_header">
+      <h1 id="member_main_header">
+        ROOKS AND KINGS MEMBERSHIP
+    </h1>
+
+    <p>
+    <button class="next_button" onclick="document.location= '/profile'">Profile</button>
+    <button onclick="document.location='/index'" class="next_button">Home</button>
+    <button onclick="document.location='/image'" class="next_button">Image</button>
+    <button class="next_button" onclick="document.location='/logout'">Logout</button>
+    </p>
+
+    <p id="loggedUser">Logged in as: {{ user }}</p>
+
+</header>
+
+<section id="member_section_1">
+    <aside id="member_list_aside">
+        <ol>
+            <ol-header>Member List</ol-header>
+        {% for cell in members %}
+        <li class="ordered_list_row">{{ cell }}</li>
+        {% endfor %}
+        </ol>
+    </aside>
+    <aside id="member_aside_right">
+         <img src="static/res/rnk_img_4.jpg" alt="Image of Rooks and kings Rokh">
+         <img src="static/res/rnk_img_5.jpg" alt="Image of Rooks and kings Rokh">
+    </aside>
+
+</section>
+
+    <article id="member_article">
+        <table id="member_table">
+            {% for head in table_data[0] %}
+            <th>{{ head }}</th>
+            {% endfor %}
+            {% for list in table_data[1:] %}
+                <tr>
+                    {% for data in list %}
+                        <td>{{ data }}</td>
+                    {% endfor%}
+                </tr>
+            {% endfor %}
+        </table>
+    </article>
+
+
+
+{% endblock %}

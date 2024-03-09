@@ -1,0 +1,212 @@
+body{
+
+    font-family: sans-serif;
+    background-color: black;
+    font-size: 150%;
+}
+
+#head_1{
+    margin-bottom: 10px;
+    background-color: darkgray;
+    text-align: center;
+    min-height:100px;
+}
+
+#h1{
+    color: green;
+    margin-top:25px;
+}
+
+#button_list{
+    list-style: none;
+}
+
+#nav_section_1{
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: gray;
+    min-height: 300px;
+}
+
+#nav_section_1::after{
+    content:" ";
+    display:block;
+    clear:both;
+}
+
+#nav_section_aside_1{
+    float:left;
+    width:20%;
+    max-height: 300px;
+    background-color: lightgray;
+}
+
+.img_2{
+    object-fit: contain;
+    width: 600px;
+    height: 300px;
+    transform: translate(-35px);
+ }
+
+#site_nav{
+    width:25%;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    margin: 10px 50px;
+    text-align: center;
+}
+
+#nav_section_aside_2{
+    float:right;
+    width:20%;
+    max-height: 300px;
+    background-color: lightgray;
+}
+
+
+button {
+    padding: 20px;
+    width: 5%;
+    height: 5%;
+}
+
+button:hover{
+    scale: 105%;
+    border-style: outset;
+    border-width: 5px;
+}
+
+.next_button{
+    margin: 10px;
+    align-self: center;
+}
+
+
+#index_footer{
+    margin: 10px;
+    width: 100%;
+    font-size: 100%;
+    background-color:darkgray;
+    text-align: center;
+    min-height:200px;
+}
+
+.ordered_list_row:nth-child( odd ){
+    background-color: lightblue;
+}
+
+.ordered_list_row{
+    padding: 12px;
+    width: 200px;
+}
+
+#unordered_list{
+    list-style-position: inside;
+    text-align: left;
+}
+
+#index_main_section{
+    background-color: darkgray;
+    min-height:400px;
+
+}
+
+#main_section_aside{
+
+    width: 50%;
+    float:right;
+}
+
+#main_section_article{
+    width:50%;
+    float:left;
+}
+
+#member_section_1{
+    background-color: gray;
+    min-height: 500px;
+}
+
+#member_header{
+    margin-bottom: 1px;
+    background-color: darkgray;
+    text-align: center;
+    min-height:100px;
+}
+
+#member_main_header{
+    color:green;
+}
+
+#member_list_aside{
+    float: left;
+    width:30%;
+    margin:10px;
+}
+
+#member_aside_right{
+    width: 30%;
+    float: right;
+    margin: 10px;
+}
+
+#member_article{
+    min-height: 500px;
+    background-color: lightgray;
+}
+
+#member_table, th, td{
+    border: 3px solid black;
+    border-collapse: collapse;
+    padding: 20px;
+    margin: 10px;
+}
+
+#reg_h1{
+    color: green;
+}
+
+#login_header{
+    color: green;
+    text-align: center;
+}
+
+#login_section_1{
+    background-color: gray;
+    min-height: 400px;
+    text-align: center;
+    margin-top:400px;
+}
+
+.form_input_style{
+    min-height: 75px;
+    min-width: 300px;
+    width: 300px;
+    text-align: center;
+    font-size: 20px;
+    margin: 20px;
+}
+
+#login_button{
+    width: 100px;
+    height: 25px;
+}
+
+#register_aside{
+    background-color: lightgray;
+    width: 20%
+}
+
+.flash_message{
+    color: red;
+    font-size: 25px;
+}
+
+#loggedUser{
+    color: green;
+}
+
+#reset{
+    color: green;
+}
